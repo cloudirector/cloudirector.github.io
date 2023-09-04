@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +10,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
+
 <body>
+  <div class="custom-cursor"></div>
   <div class="container">
     <div class="profile">
       <img src="img/profile.png" class="profile">
@@ -36,9 +39,17 @@ fn main() {
       </code></pre>
     </div>
   </div>
+  <script>
+    document.addEventListener('mousemove', (e) => {
+      const cursor = document.querySelector('.custom-cursor');
+      cursor.style.left = e.pageX + 'px';
+      cursor.style.top = e.pageY + 'px';
+    });
+  </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
   <script>
     hljs.highlightAll();
   </script>
 </body>
+
 </html>
