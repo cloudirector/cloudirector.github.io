@@ -1,57 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>cloudirector - home page</title>
-    <style>
-        html,
-        body {
-            height: 100%;
-            min-width: 100%;
-            position: relative;
-            background: #d0f0f9 url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='%231564e3' fill-opacity='0.4'%3E%3Cpath fill-rule='evenodd' d='M0 0h40v40H0V0zm40 40h40v40H40V40zm0-40h2l-2 2V0zm0 4l4-4h2l-6 6V4zm0 4l8-8h2L40 10V8zm0 4L52 0h2L40 14v-2zm0 4L56 0h2L40 18v-2zm0 4L60 0h2L40 22v-2zm0 4L64 0h2L40 26v-2zm0 4L68 0h2L40 30v-2zm0 4L72 0h2L40 34v-2zm0 4L76 0h2L40 38v-2zm0 4L80 0v2L42 40h-2zm4 0L80 4v2L46 40h-2zm4 0L80 8v2L50 40h-2zm4 0l28-28v2L54 40h-2zm4 0l24-24v2L58 40h-2zm4 0l20-20v2L62 40h-2zm4 0l16-16v2L66 40h-2zm4 0l12-12v2L70 40h-2zm4 0l8-8v2l-6 6h-2zm4 0l4-4v2l-2 2h-2z'/%3E%3C/g%3E%3C/svg%3E");
-            margin: 0;
-            padding: 0;
-            max-height: 100vh;
-            font-family: "Roboto", sans-serif;
-            overflow: hidden;
-        }
-
-        .center-div {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: #ffffff;
-            border-radius: 50%;
-            width: 200px;
-            height: 200px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .profile-picture {
-            width: 150px;
-            height: 150px;
-            background-color: #007bff;
-            border-radius: 50%;
-        }
-
-        .info {
-            margin-left: 20px;
-            padding: 20px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css">
+  <title>cloudirector - home page</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-    <div class="center-div">
-        <div class="profile-picture"></div>
-        <div class="info">
-            <h1>Your Name</h1>
-            <p>Some information about you goes here.</p>
-        </div>
+  <div class="container">
+    <div class="profile">
+      <img src="img/profile.png" class="profile">
     </div>
+    <div class="code-block">
+      <pre><code>
+class Cloudirector:
+    def __init__(self):
+        self.experience = None
+    def say_hello(self):
+        print("wsp nerds go look at my code")
+me = Cloudirector()
+me.say_hello()
+      </code></pre>
+    </div>
+    <div class="hidden-div">
+      <pre><code>
+fn main() {
+  let github_username = "cloudirector";
+  let programming_languages = "Rust, Python, JavaScript";
+  println!("GitHub Account: https://github.com/{}", github_username);
+  println!("Programming Languages: {}", programming_languages);
+}
+      </code></pre>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+  <script>
+    hljs.highlightAll();
+  </script>
 </body>
 </html>

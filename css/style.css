@@ -1,0 +1,69 @@
+/* Reset some default styles */
+html, body {
+    height: 100%;
+    min-width: 100%;
+    position: relative;
+    background: #d0f0f9 url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='%231564e3' fill-opacity='0.4'%3E%3Cpath fill-rule='evenodd' d='M0 0h40v40H0V0zm40 40h40v40H40V40zm0-40h2l-2 2V0zm0 4l4-4h2l-6 6V4zm0 4l8-8h2L40 10V8zm0 4L52 0h2L40 14v-2zm0 4L56 0h2L40 18v-2zm0 4L60 0h2L40 22v-2zm0 4L64 0h2L40 26v-2zm0 4L68 0h2L40 30v-2zm0 4L72 0h2L40 34v-2zm0 4L76 0h2L40 38v-2zm0 4L80 0v2L42 40h-2zm4 0L80 4v2L46 40h-2zm4 0L80 8v2L50 40h-2zm4 0l28-28v2L54 40h-2zm4 0l24-24v2L58 40h-2zm4 0l20-20v2L62 40h-2zm4 0l16-16v2L66 40h-2zm4 0l12-12v2L70 40h-2zm4 0l8-8v2l-6 6h-2zm4 0l4-4v2l-2 2h-2z'/%3E%3C/g%3E%3C/svg%3E");
+    font-family: "Comfortaa";
+    overflow: hidden;
+  }
+  
+  /* Styles for the container */
+  .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #1C1C1C;
+    border-radius: 20px;
+    width: 550px;
+    height: 225px;
+    overflow: hidden;
+    transition: height 0.5s;
+  }
+  
+  .container:hover {
+    height: 400px; /* Adjust the expanded height as needed */
+  }
+  
+  /* Styles for the profile image */
+  .profile {
+    width: 200px;
+    height: 200px;
+    object-fit: fill;
+    display: inline-block;
+    vertical-align: top; /* Align to the top */
+  }
+  
+  /* Styles for the code block */
+  .code-block {
+    margin-top: 20px;
+    background-color: #F0F0F0;
+    margin-left: 20px;
+    border-radius: 10px;
+    font-size: 10px;
+    line-height: 1.5;
+    height: 175px;
+    position: relative;
+    display: inline-block;
+    vertical-align: top; /* Align to the top */
+  }
+  
+  /* Styles for the hidden div */
+  .hidden-div {
+    font-size: 10px;
+    opacity: 0;
+    bottom: 30px;
+    left: 0;
+    width: 100%;
+    background-color: #F0F0F0;
+    transition: opacity 0.3s;
+    transition-delay: 0.1s;
+    position: absolute;
+    height: 140px;
+  }
+  
+  .container:hover .hidden-div {
+    opacity: 1;
+  }
+  
