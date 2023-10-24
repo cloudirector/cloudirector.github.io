@@ -12,7 +12,6 @@
 </head>
 
 <body>
-  <div class="custom-cursor"></div>
   <div class="container">
     <div class="profile">
       <img src="img/profile.png" class="profile">
@@ -44,13 +43,6 @@ fn main() {
       </code></pre>
     </div>
   </div>
-  <script>
-    document.addEventListener('mousemove', (e) => {
-      const cursor = document.querySelector('.custom-cursor');
-      cursor.style.left = e.pageX + 'px';
-      cursor.style.top = e.pageY + 'px';
-    });
-  </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
   <script>
     hljs.highlightAll();
