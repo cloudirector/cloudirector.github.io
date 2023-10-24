@@ -19,20 +19,25 @@
     </div>
     <div class="code-block">
       <pre><code>
-class Cloudirector:
-    def __init__(self):
-        self.experience = None
-    def say_hello(self):
-        print("wsp nerds go look at my code")
-me = Cloudirector()
-me.say_hello()
+defmodule Cloudirector do
+  defstruct experience: nil
+  def new do
+    %Cloudirector{}
+  end
+  def say_hello(%Cloudirector{} = me) do
+    IO.puts("wsp nerds go look at my code")
+    me
+  end
+end
+me = %Cloudirector{}
+me = Cloudirector.say_hello(me)
       </code></pre>
     </div>
     <div class="hidden-div">
       <pre><code>
 fn main() {
   let github_username = "cloudirector";
-  let programming_languages = "Rust, Python, JavaScript";
+  let programming_languages = "Elixir, Rust, Python, JavaScript";
   println!("GitHub Account: https://github.com/{}", github_username);
   println!("Programming Languages: {}", programming_languages);
 }
