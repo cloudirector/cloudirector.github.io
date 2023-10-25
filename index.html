@@ -24,13 +24,13 @@ defmodule Cloudirector do
   def new do
     %Cloudirector{}
   end
-  def say_hello(%Cloudirector{} = me) do
+  def say_hello(%Cloudirector{} = _me) do
     IO.puts("wsp nerds go look at my code")
-    me
+    :ok
   end
 end
-me = %Cloudirector{}
-me = Cloudirector.say_hello(me)
+me = Cloudirector.new()
+Cloudirector.say_hello(me)
       </code></pre>
     </div>
     <div class="hidden-div">
