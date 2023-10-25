@@ -18,7 +18,7 @@ body {
     transform: translate(-50%, -50%);
     background-color: #1C1C1C;
     border-radius: 20px;
-    width: 550px;
+    width: 700px;
     height: 300px;
     overflow: hidden;
     transition: height 0.5s;
@@ -31,9 +31,9 @@ body {
 
 /* Styles for the profile image */
 .profile {
-    padding: 10px;
-    width: 225px;
-    height: 225px;
+    width: 300px;
+    height: 300px;
+    margin-left: 10px;
     object-fit: fill;
     display: inline-block;
     vertical-align: top;
@@ -42,12 +42,15 @@ body {
 
 /* Styles for the code block */
 .code-block {
+    padding-left: 30px;
+    margin-left: 30px;
     margin-top: 20px;
     background-color: #F0F0F0;
     border-radius: 10px;
     font-size: 10px;
     line-height: 1.5;
     height: 260px;
+    width: 300px;
     position: relative;
     display: inline-block;
     vertical-align: top;
