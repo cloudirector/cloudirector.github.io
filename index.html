@@ -19,28 +19,31 @@
     </div>
     <div class="code-block">
       <pre><code>
-defmodule Cloudirector do
-  defstruct experience: nil
-  def new do
-    %Cloudirector{}
-  end
-  def say_hello(%Cloudirector{} = _me) do
-    IO.puts("wsp nerds go look at my code")
-    :ok
-  end
-end
-me = Cloudirector.new()
-Cloudirector.say_hello(me)
+      defmodule Cloudirector do
+        defstruct experience: nil
+        def new do
+          %Cloudirector{}
+        end
+        def say_hello(%Cloudirector{} = _me) do
+          IO.puts("wsp nerds go look at my code")
+          :ok
+        end
+      end
+      me = Cloudirector.new()
+      Cloudirector.say_hello(me)
       </code></pre>
     </div>
     <div class="hidden-div">
       <pre><code>
-fn main() {
-  let github_username = "cloudirector";
-  let programming_languages = "Elixir, Rust, Python, JavaScript";
-  println!("GitHub Account: https://github.com/{}", github_username);
-  println!("Programming Languages: {}", programming_languages);
-}
+      fn main() {
+          let github_username = "cloudirector";
+          let programming_languages = "Elixir, Rust, Python, JavaScript";
+          println!("GitHub Account: https://github.com/{}", github_username);
+          let languages: Vec<&str> = programming_languages.split(", ").collect();
+          for language in languages {
+              println!("Programming Language: {}", language);
+          }
+      }
       </code></pre>
     </div>
   </div>
