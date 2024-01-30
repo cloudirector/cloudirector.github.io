@@ -1,58 +1,58 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Homepage</title>
-  <link rel="icon" type="image/png" href="img/profile.png">
-  <link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet'>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css">
-  <link rel="stylesheet" type="text/css" href="css/style.css">
-</head>
-
-<body>
-  <div class="custom-cursor"></div>
-  <div class="container">
-    <div class="profile">
-      <img src="img/profile.png" class="profile">
-    </div>
-    <div class="code-block">
-      <pre><code>
-defmodule Cloudirector do
-  defstruct experience: nil
-  def new do
-    %Cloudirector{}
-  end
-  def say_hello(%Cloudirector{} = _me) do
-    IO.puts("wsp nerds go look at my code")
-    :ok
-  end
-end
-me = Cloudirector.new()
-Cloudirector.say_hello(me)
-      </code></pre>
-    </div>
-    <div class="hidden-div">
-      <pre><code>
-fn main() {
-  let github_username = "cloudirector";
-  let programming_languages = "Elixir, Rust, Python, JavaScript";
-  println!("GitHub Account: https://github.com/{}", github_username);
-  println!("Programming Languages: {}", programming_languages);
+<header>
+<style>
+body {
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: #E9DAB3;
 }
-      </code></pre>
-    </div>
-  </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
-  <script>
-    hljs.highlightAll();
-    document.addEventListener('mousemove', (e) => {
-      const cursor = document.querySelector('.custom-cursor');
-      cursor.style.left = e.pageX + 'px';
-      cursor.style.top = e.pageY + 'px';
-    });
-  </script>
-</body>
 
-</html>
+#container {
+display: flex;
+justify-content: center;
+align-items: center;
+width: 70%;
+height: 70%;
+background-color: white;
+border-radius: 20px;
+}
+#avatar-container {
+width: 200px;
+height: 200px;
+}
+#avatar {
+width: 100%;
+height: 100%;
+border-radius: 100px;
+</style>
+</header>
+<body>
+<div id="container">
+<div id="avatar-container">
+<img id="avatar" src="" alt="GitHub Avatar">
+</div>
+</div>
+</body>
+<script>
+async function fetchData() {
+  try {
+    const response = await fetch('https://api.github.com/users/cloudirector');
+    if (!response.ok) {
+      throw new Error(`Network response was not ok: ${response.status}`);
+    }
+    const data = await response.json();
+    console.log('JSON data:', data);
+    const avatarElement = document.getElementById('avatar');
+    if (avatarElement) {
+      avatarElement.src = data.avatar_url;
+      avatarElement.alt = 'GitHub Avatar';
+    } else {
+      console.warn("No 'avatar' element found in the HTML.");
+    }
+  } catch (error) {
+    console.error('Error during fetch operation:', error);
+  }
+}
+
+fetchData();
+</script>
