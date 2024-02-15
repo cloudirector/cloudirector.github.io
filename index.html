@@ -1,58 +1,95 @@
 <header>
-<style>
-body {
-display: flex;
-justify-content: center;
-align-items: center;
-background-color: #E9DAB3;
-}
+  <style>
+    @font-face {
+      font-family: "Comfortaa";
+      src: url("fonts/Comfortaa.ttf");
+    }
 
-#container {
-display: flex;
-justify-content: center;
-align-items: center;
-width: 70%;
-height: 70%;
-background-color: white;
-border-radius: 20px;
-}
-#avatar-container {
-width: 200px;
-height: 200px;
-}
-#avatar {
-width: 100%;
-height: 100%;
-border-radius: 100px;
-</style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #E9DAB3;
+      font-family: 'Comfortaa';
+    }
+
+    img {
+      box-shadow: 0 0 10px rgba(233, 218, 179, 1);
+    }
+
+    #container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 800px;
+      height: 500px;
+      background-color: white;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 1);
+      border-radius: 20px;
+    }
+
+    #avatar-container {
+      width: 200px;
+      height: 200px;
+    }
+
+    #avatar {
+      width: 100%;
+      height: 100%;
+      border-radius: 100%;
+    }
+
+    #buttons-container {
+      display: flex;
+      flex-direction: column;
+      align-content: flex-end;
+      width: 200px;
+      height: 200px;
+    }
+
+    .button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #E9DAB3; 
+      box-shadow: 0 0 10px rgba(233, 218, 179, 1);
+      width: 100%;
+      height: 100%;
+      border-radius: 15px;
+      margin: 1px;
+    }
+
+    .github-button {
+      border-radius: 50px 160px 20px 160px;
+    }
+
+    .caub-button {
+      width: 100%;
+      width: 170px;
+      align-self: flex-end;
+    }
+
+    .jslinux-button {
+      border-radius: 160px 50px 100px 20px;
+    }
+  </style>
 </header>
-<body>
-<div id="container">
-<div id="avatar-container">
-<img id="avatar" src="" alt="GitHub Avatar">
-</div>
-</div>
-</body>
-<script>
-async function fetchData() {
-  try {
-    const response = await fetch('https://api.github.com/users/cloudirector');
-    if (!response.ok) {
-      throw new Error(`Network response was not ok: ${response.status}`);
-    }
-    const data = await response.json();
-    console.log('JSON data:', data);
-    const avatarElement = document.getElementById('avatar');
-    if (avatarElement) {
-      avatarElement.src = data.avatar_url;
-      avatarElement.alt = 'GitHub Avatar';
-    } else {
-      console.warn("No 'avatar' element found in the HTML.");
-    }
-  } catch (error) {
-    console.error('Error during fetch operation:', error);
-  }
-}
 
-fetchData();
-</script>
+<body>
+  <div id="container">
+    <div id="avatar-container">
+      <img id="avatar" src="img/143876484.jpeg" alt="GitHub Avatar">
+    </div>
+    <div id="buttons-container">
+      <div class="button github-button">
+        Github
+      </div>
+      <div class="button caub-button">
+        Caub
+      </div>
+      <div class="button jslinux-button">
+        JsLinux
+      </div>
+  </div>
+  </div>
+</body>
