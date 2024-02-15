@@ -1,137 +1,77 @@
-html,
+@font-face {
+font-family: "Comfortaa";
+src: url("fonts/Comfortaa.ttf");
+}
+
 body {
-    height: 100%;
-    min-width: 100%;
-    position: relative;
-    background: #d0f0f9 url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='%231564e3' fill-opacity='0.4'%3E%3Cpath fill-rule='evenodd' d='M0 0h40v40H0V0zm40 40h40v40H40V40zm0-40h2l-2 2V0zm0 4l4-4h2l-6 6V4zm0 4l8-8h2L40 10V8zm0 4L52 0h2L40 14v-2zm0 4L56 0h2L40 18v-2zm0 4L60 0h2L40 22v-2zm0 4L64 0h2L40 26v-2zm0 4L68 0h2L40 30v-2zm0 4L72 0h2L40 34v-2zm0 4L76 0h2L40 38v-2zm0 4L80 0v2L42 40h-2zm4 0L80 4v2L46 40h-2zm4 0L80 8v2L50 40h-2zm4 0l28-28v2L54 40h-2zm4 0l24-24v2L58 40h-2zm4 0l20-20v2L62 40h-2zm4 0l16-16v2L66 40h-2zm4 0l12-12v2L70 40h-2zm4 0l8-8v2l-6 6h-2zm4 0l4-4v2l-2 2h-2z'/%3E%3C/g%3E%3C/svg%3E");
-    font-family: "Comfortaa";
-    overflow: hidden;
-    cursor: none;
+display: flex;
+align-items: center;
+justify-content: center;
+font-family: 'Comfortaa';
+background-color: #E9DAB3;
 }
 
-::selection {
-    background-color: transparent;
-    color: #000;
+img {
+box-shadow: 0 0 10px rgba(233, 218, 179, 1);
 }
 
-.container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #1C1C1C;
-    border-radius: 20px;
-    width: 700px;
-    height: 300px;
-    overflow: hidden;
-    transition: height 0.5s;
+#container {
+display: flex;
+justify-content: center;
+align-items: center;
+width: 800px;
+height: 500px;
+border-radius: 20px;
+background-color: white;
+box-shadow: 0 0 10px rgba(255, 255, 255, 1);
 }
 
-.container:hover {
-    height: 480px;
+#avatar-container {
+width: 200px;
+height: 200px;
 }
 
-.profile {
-    width: 300px;
-    height: 300px;
-    margin-left: 10px;
-    object-fit: fill;
-    display: inline-block;
-    vertical-align: top;
+#avatar {
+width: 100%;
+height: 100%;
+border-radius: 100%;
 }
 
-.code-block {
-    padding-right: 30px;
-    margin-left: 30px;
-    margin-top: 20px;
-    background-color: #F0F0F0;
-    border-radius: 10px;
-    font-size: 10px;
-    line-height: 1.5;
-    height: 260px;
-    width: 300px;
-    position: relative;
-    display: inline-block;
-    vertical-align: top;
+#buttons-container {
+display: flex;
+flex-direction: column;
+align-content: flex-end;
+gap: 10px;
+width: 200px;
+height: 200px;
 }
 
-.hidden-div {
-    font-size: 10px;
-    opacity: 0;
-    bottom: 40px;
-    left: 0;
-    width: 100%;
-    background-color: #F0F0F0;
-    transition: opacity 0.3s;
-    transition-delay: 0.1s;
-    position: absolute;
-    height: 140px;
+.button {
+display: flex;
+align-items: center;
+justify-content: center;
+margin: 1px;
+width: 100%;
+height: 100%;
+border-radius: 15px;
+background-color: #E9DAB3; 
+box-shadow: 0 0 10px rgba(233, 218, 179, 1);
+transition: background-color 0.5s ease-in-out;
 }
 
-.container:hover .hidden-div {
-    opacity: 1;
+.button:hover {
+background-color: #ffe6a5;
 }
 
-.custom-cursor {
-    z-index: 9999;
-    width: 20px;
-    height: 20px;
-    border-width: 2px;
-    border-style: solid;
-    border-color: #1C1C1C;
-    border-radius: 50%;
-    background-color: #269AF2;
-    background-size: cover;
-    position: absolute;
-    pointer-events: none;
+.about-button {
+border-radius: 50px 160px 20px 160px;
 }
 
-@media screen and (max-width: 768px) { 
-    .container {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-color: #1C1C1C;
-        border-radius: 20px;
-        width: 300px;
-        height: 150px;
-        overflow: hidden;
-        transition: height 0.5s;
-    }
-    
-    .container:hover {
-        height: 480px;
-    }
-    
-    .profile {
-        width: 200px;
-        height: 200px;
-        margin-left: 25px;
-        margin-top: -15px;
-        object-fit: fill;
-        display: inline-block;
-        vertical-align: top;
-    }
-
-    .code-block {
-        opacity: 0;
-    }
-
-    .hidden-div {
-        font-size: 5px;
-        opacity: 0;
-        bottom: 100px;
-        left: 0;
-        width: 100%;
-        background-color: #F0F0F0;
-        transition: opacity 0.3s;
-        transition-delay: 0.1s;
-        position: absolute;
-        height: 140px;
-    }
-    
+.blog-button {
+width: 170px;
+align-self: flex-end;
 }
 
-
-
+.socials-button {
+border-radius: 160px 20px 160px 50px;
+}
