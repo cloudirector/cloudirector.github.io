@@ -22,16 +22,7 @@ jobs:
       run: npm install puppeteer
 
     - name: Capture Screenshot
-      run: |
-        const puppeteer = require('puppeteer');
-
-        (async () => {
-          const browser = await puppeteer.launch();
-          const page = await browser.newPage();
-          await page.goto('https://cloudirector.github.io');  // Replace with your actual website URL
-          await page.screenshot({ path: 'screenshot.png' });
-          await browser.close();
-        })();
+      run: node capture-screenshot.js
 
     - name: Commit Screenshot
       run: |
