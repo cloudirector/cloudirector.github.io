@@ -47,6 +47,8 @@ img {
 }
 
 .button {
+    color: #DFC490;
+    font-size: 20px;
     user-select: none;
     display: flex;
     align-items: center;
