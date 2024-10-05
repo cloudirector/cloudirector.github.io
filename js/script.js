@@ -3,16 +3,6 @@ const themeToggleBtn = document.getElementById('theme-toggle');
 const lightIcon = document.getElementById('theme-toggle-light-icon');
 const darkIcon = document.getElementById('theme-toggle-dark-icon');
 
-tailwind.config = {
-    theme: {
-        extend: {
-            margin: {
-              '600': '600px',
-            }
-        }
-    }
-  }
-
 function setTheme(theme) {
     document.documentElement.setAttribute('data-theme', theme);
     if (theme === 'dark') {
