@@ -1,3 +1,4 @@
+const buildnowggBtn = document.getElementById("buildnowgg-button");
 const gamesBtn = document.getElementById("games-button");
 const githubBtn = document.getElementById("github-button");
 const themeToggleBtn = document.getElementById("theme-toggle");
@@ -22,6 +23,11 @@ if (savedTheme) {
 } else {
     setTheme("dark");
 }
+
+buildnowggBtn.addEventListener("click", () => {
+    const url = "/BuildNowGG";
+    window.open(url, "_blank").focus();
+});
 
 gamesBtn.addEventListener("click", () => {
     const url = "/games/";
