@@ -1,5 +1,5 @@
 const buildnowggBtn = document.getElementById("buildnowgg-button");
-const gamesBtn = document.getElementById("games-button");
+const webretroBtn = document.getElementById("webretro-button");
 const githubBtn = document.getElementById("github-button");
 const themeToggleBtn = document.getElementById("theme-toggle");
 const lightIcon = document.getElementById("theme-toggle-light-icon");
@@ -29,8 +29,8 @@ buildnowggBtn.addEventListener("click", () => {
     window.open(url, "_blank").focus();
 });
 
-gamesBtn.addEventListener("click", () => {
-    const url = "/games/";
+webretroBtn.addEventListener("click", () => {
+    const url = "/webretro/";
     window.open(url, "_blank").focus();
 });
 
